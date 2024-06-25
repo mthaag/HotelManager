@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.matheus.hotelmanager.controller.mainPageController">
+   <children>
+      <Pane layoutX="200.0" prefHeight="99.0" prefWidth="700.0">
+         <children>
+            <Label layoutX="14.0" layoutY="34.0" text="Reservas Recentes">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-6.0" layoutY="84.0" prefHeight="11.0" prefWidth="700.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="tabela" layoutX="200.0" layoutY="92.0" prefHeight="498.0" prefWidth="693.0" style="-fx-background-color: white;">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="clienteColumn" prefWidth="181.0" text="Cliente" />
+          <TableColumn fx:id="cpfColumn" prefWidth="121.0" text="CPF" />
+            <TableColumn fx:id="dtEntradaColumn" prefWidth="114.0" text="Data Entrada" />
+            <TableColumn fx:id="dtSaidaColumn" prefWidth="110.0" text="Data Saida" />
+            <TableColumn fx:id="nuQuartoColumn" prefWidth="132.0" text="Numero Quarto" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TableView>
+      <ListView prefHeight="590.0" prefWidth="200.0" style="-fx-background-color: #F2F4F4;" />
+      <HBox alignment="CENTER" layoutY="99.0" onMouseClicked="#chamaClientes" prefHeight="35.0" prefWidth="200.0" styleClass="itemStyle" stylesheets="@css/mainPage.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/account-group.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="  Clientes" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="141.0" prefHeight="35.0" prefWidth="200.0" styleClass="itemStyle" stylesheets="@css/mainPage.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/store-check.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#chamaReserva" prefHeight="19.0" prefWidth="77.0" text=" Reservas" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="183.0" prefHeight="35.0" prefWidth="200.0" styleClass="itemStyle" stylesheets="@css/mainPage.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/account.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#chamaUsuarios" text="  Usuários" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="228.0" prefHeight="35.0" prefWidth="200.0" styleClass="itemStyle" stylesheets="@css/mainPage.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/bed.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#chamaQuartos" text="  Quartos" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="549.0" onMouseClicked="#logout" prefHeight="41.0" prefWidth="200.0" styleClass="itemStyle" stylesheets="@css/mainPage.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/door-open.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text=" Sair" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

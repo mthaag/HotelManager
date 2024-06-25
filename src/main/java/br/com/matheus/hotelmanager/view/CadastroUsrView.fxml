@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.matheus.hotelmanager.controller.cadastroController">
+      <Label layoutX="230.0" layoutY="39.0" text="Cadastrar-se">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="108.0" text="Nome Completo" />
+      <TextField fx:id="nm_completo" layoutX="199.0" layoutY="103.0" prefHeight="26.0" prefWidth="269.0" />
+      <Label layoutX="82.0" layoutY="151.0" text="Nome de Usuário" />
+      <TextField fx:id="nm_usuario" layoutX="199.0" layoutY="146.0" prefHeight="26.0" prefWidth="269.0" />
+      <Label layoutX="154.0" layoutY="198.0" text="E-mail" />
+      <TextField fx:id="email" layoutX="199.0" layoutY="194.0" prefHeight="26.0" prefWidth="269.0" />
+      <Label layoutX="155.0" layoutY="246.0" text="Senha" />
+      <TextField fx:id="senha" layoutX="199.0" layoutY="242.0" prefHeight="26.0" prefWidth="269.0" />
+      <Button layoutX="223.0" layoutY="308.0" mnemonicParsing="false" text="Cadastrar-se" onAction="#cadastraUsr"/>
+      <Button layoutX="344.0" layoutY="308.0" mnemonicParsing="false" text="Cancelar" onAction="#cancelaCadastro"/>
+</Pane>

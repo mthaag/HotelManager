@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.matheus.hotelmanager.controller.clientesControler">
+   <children>
+      <Pane layoutX="1.0" prefHeight="99.0" prefWidth="1001.0" style="-fx-background-color: #F2F4F4;">
+         <children>
+            <Label layoutX="127.0" layoutY="33.0" prefHeight="35.0" prefWidth="113.0" text="Clientes">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="10.0" onMouseClicked="#voltaMainPage" prefHeight="80.0" prefWidth="80.0" styleClass="itemStyle" stylesheets="@css/clientes.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/arrow-left-thick.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <TabPane layoutX="1.0" layoutY="98.0" prefHeight="493.0" prefWidth="474.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Novo Cliente">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="85.0" layoutY="50.0" text="Nome" />
+                        <TextField fx:id="nometxt" layoutX="128.0" layoutY="46.0" prefHeight="26.0" prefWidth="163.0" />
+                        <Label layoutX="52.0" layoutY="95.0" text="Sobrenome" />
+                        <TextField fx:id="sobrenometxt" layoutX="128.0" layoutY="91.0" prefHeight="26.0" prefWidth="163.0" />
+                        <Label layoutX="95.0" layoutY="141.0" text="CPF" />
+                        <TextField fx:id="cpftxt" layoutX="128.0" layoutY="137.0" prefHeight="26.0" prefWidth="163.0" />
+                        <Label layoutX="69.0" layoutY="184.0" text="Telefone" />
+                        <TextField fx:id="telefonetxt" layoutX="128.0" layoutY="180.0" prefHeight="26.0" prefWidth="163.0" />
+                        <Label layoutX="84.0" layoutY="230.0" text="E-mail" />
+                        <TextField fx:id="emailtxt" layoutX="128.0" layoutY="226.0" prefHeight="26.0" prefWidth="163.0" />
+                        <Label layoutX="8.0" layoutY="278.0" text="Form. Pagamento" />
+                        <TextField fx:id="formPagtxt" layoutX="128.0" layoutY="274.0" prefHeight="26.0" prefWidth="163.0" />
+                        <Button layoutX="209.0" layoutY="388.0" mnemonicParsing="false" onAction="#cadastraCliente" text="Criar" />
+                        <Label layoutX="67.0" layoutY="322.0" text="Endereço" />
+                        <TextField fx:id="enderecotxt" layoutX="128.0" layoutY="318.0" prefHeight="26.0" prefWidth="336.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Editar Cliente">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField layoutX="106.0" layoutY="38.0" prefHeight="26.0" prefWidth="204.0" />
+                        <HBox alignment="CENTER" layoutX="316.0" layoutY="28.0" prefHeight="46.0" prefWidth="46.0" styleClass="itemStyle" stylesheets="@css/clientes.css">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/magnify.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Label layoutX="28.0" layoutY="42.0" text="Insira o CPF" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TableView fx:id="tabela" layoutX="475.0" layoutY="104.0" prefHeight="480.0" prefWidth="520.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="31.0" text="Id" />
+          <TableColumn fx:id="nomeColumn" prefWidth="98.0" text="Nome" />
+            <TableColumn fx:id="cpfColumn" prefWidth="82.0" text="CPF" />
+            <TableColumn fx:id="telefoneColumn" prefWidth="75.0" text="Telefone" />
+            <TableColumn fx:id="emailColumn" prefWidth="78.0" text="E-mail" />
+            <TableColumn fx:id="pagmentoColumn" prefWidth="155.0" text="Forma de pagameto" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

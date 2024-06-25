@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="351.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.matheus.hotelmanager.controller.loginController">
+      <Label contentDisplay="BOTTOM" layoutX="99.0" layoutY="126.0" text="Usuário" />
+      <TextField fx:id="usuario" layoutX="151.0" layoutY="122.0" />
+      <Label contentDisplay="BOTTOM" layoutX="104.0" layoutY="170.0" text="Senha" />
+      <Button layoutX="193.0" layoutY="251.0" mnemonicParsing="false" onAction="#login" text="Entrar" />
+      <Hyperlink accessibleRole="BUTTON" layoutX="177.0" layoutY="296.0" onAction="#chamaCadastro" text="Criar Usuário" />
+      <Label layoutX="192.0" layoutY="39.0" text="Login">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   <PasswordField fx:id="senha" layoutX="151.0" layoutY="163.0" />
+</Pane>

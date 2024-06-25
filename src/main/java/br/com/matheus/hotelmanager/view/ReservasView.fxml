@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.matheus.hotelmanager.controller.reservaController">
+   <children>
+      <Pane layoutX="1.0" prefHeight="99.0" prefWidth="1001.0" style="-fx-background-color: #F2F4F4;">
+         <children>
+            <Label layoutX="127.0" layoutY="33.0" prefHeight="35.0" prefWidth="137.0" text="Reservas">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="10.0" onMouseClicked="#voltaMainPage" prefHeight="80.0" prefWidth="80.0" styleClass="itemStyle" stylesheets="@css/clientes.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/arrow-left-thick.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <TableView fx:id="tabela" layoutX="490.0" layoutY="104.0" prefHeight="479.0" prefWidth="508.0">
+        <columns>
+          <TableColumn fx:id="idTxt" prefWidth="28.0" text="Id" />
+          <TableColumn fx:id="nomeTxt" prefWidth="101.0" text="Nome" />
+            <TableColumn fx:id="cpfTxt" prefWidth="99.0" text="CPF" />
+            <TableColumn fx:id="dtentradaTxt" prefWidth="115.0" text="Data Entrada" />
+            <TableColumn fx:id="dtsaidaTxt" prefWidth="89.0" text="Data Saida" />
+            <TableColumn fx:id="precoTxt" prefWidth="74.0" text="preco" />
+        </columns>
+      </TableView>
+      <TabPane layoutY="99.0" prefHeight="493.0" prefWidth="490.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Nova Reserva">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="139.0" layoutY="50.0" text="CPF" />
+                        <TextField fx:id="cpftxt" layoutX="170.0" layoutY="46.0" prefHeight="26.0" prefWidth="163.0" styleClass="text-field" />
+                        <Label layoutX="95.0" layoutY="97.0" text="n° Quarto" />
+                        <TextField fx:id="quartoTxt" layoutX="169.0" layoutY="93.0" prefHeight="26.0" prefWidth="166.0" />
+                        <Label layoutX="76.0" layoutY="150.0" text="Data Entrada" />
+                        <Label layoutX="91.0" layoutY="191.0" text="Data Saída" />
+                        <Button layoutX="225.0" layoutY="259.0" mnemonicParsing="false" onAction="#criaReserva" text="Criar" />
+                        <DatePicker fx:id="dt_entradaTxt" layoutX="170.0" layoutY="145.0" prefHeight="26.0" prefWidth="166.0" />
+                        <DatePicker fx:id="dt_saidaTxt" layoutX="171.0" layoutY="186.0" prefHeight="26.0" prefWidth="166.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Cancelar Reserva">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

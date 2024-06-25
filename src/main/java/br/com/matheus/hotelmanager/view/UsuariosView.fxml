@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.matheus.hotelmanager.controller.usuariosController">
+   <children>
+      <Pane layoutX="1.0" prefHeight="99.0" prefWidth="1023.0" style="-fx-background-color: #F2F4F4;">
+         <children>
+            <Label layoutX="127.0" layoutY="33.0" prefHeight="35.0" prefWidth="131.0" text="Usuarios">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="10.0" onMouseClicked="#voltaMainPage" prefHeight="80.0" prefWidth="80.0" styleClass="itemStyle" stylesheets="@css/clientes.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/arrow-left-thick.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Separator layoutY="98.0" prefHeight="6.0" prefWidth="1023.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="tabela" layoutX="502.0" layoutY="109.0" prefHeight="474.0" prefWidth="514.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="43.0" text="Id" />
+          <TableColumn fx:id="nmUsuarioColumn" prefWidth="322.0" text="Nome de Usuario" />
+            <TableColumn fx:id="emailColumn" prefWidth="148.0" text="E-mail" />
+        </columns>
+      </TableView>
+      <TabPane layoutX="1.0" layoutY="103.0" prefHeight="487.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Novo Usuario">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="70.0" layoutY="46.0" text="Nome Completo" />
+                        <TextField fx:id="nometxt" layoutX="179.0" layoutY="42.0" prefHeight="26.0" prefWidth="137.0" />
+                        <Label layoutX="64.0" layoutY="93.0" text="Nome de Usuario" />
+                        <TextField fx:id="nomeUsrTxt" layoutX="179.0" layoutY="89.0" prefHeight="26.0" prefWidth="137.0" />
+                        <Label layoutX="133.0" layoutY="145.0" text="E-mail" />
+                        <TextField fx:id="emailtxt" layoutX="179.0" layoutY="141.0" prefHeight="26.0" prefWidth="137.0" />
+                        <Label layoutX="133.0" layoutY="193.0" text="Senha" />
+                        <TextField fx:id="senhatxt" layoutX="179.0" layoutY="189.0" prefHeight="26.0" prefWidth="137.0" />
+                        <Button layoutX="217.0" layoutY="258.0" mnemonicParsing="false" onAction="#cadastraUsr" text="Criar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Editar Usuario">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="500.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

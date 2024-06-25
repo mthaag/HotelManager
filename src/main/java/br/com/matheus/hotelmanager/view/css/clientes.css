@@ -1,0 +1,18 @@
+.itemStyle{
+
+    -fx-background-radius: 110;
+    -fx-background-color: #F2F4F4
+
+}
+
+.itemStyle:hover{
+
+    -fx-background-color: #AEB6BF
+
+}
+
+.text-field {
+  -fx-border-color: grey;
+  -fx-border width: 0 0 1 0; // top, right, bottom, left
+  -fx-background-color: transparent;
+}

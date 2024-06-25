@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.matheus.hotelmanager.controller.quartosController">
+   <children>
+      <Pane layoutX="1.0" prefHeight="99.0" prefWidth="1001.0" style="-fx-background-color: #F2F4F4;">
+         <children>
+            <Label layoutX="127.0" layoutY="33.0" prefHeight="35.0" prefWidth="113.0" text="Quartos">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="10.0" onMouseClicked="#voltaMainPage" prefHeight="80.0" prefWidth="80.0" styleClass="itemStyle" stylesheets="@css/clientes.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/arrow-left-thick.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <TableView fx:id="tabela" layoutX="502.0" layoutY="98.0" prefHeight="485.0" prefWidth="496.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="82.0" text="Id" />
+          <TableColumn fx:id="tipoQuartoColumn" prefWidth="109.0" text="Tipo" />
+            <TableColumn fx:id="nuColumn" prefWidth="109.0" text="numero" />
+            <TableColumn fx:id="andarColumn" prefWidth="108.0" text="Andar" />
+            <TableColumn fx:id="precoColumn" prefWidth="87.0" text="preco" />
+        </columns>
+      </TableView>
+      <TabPane layoutX="1.0" layoutY="99.0" prefHeight="493.0" prefWidth="496.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Novo Quarto">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="86.0" layoutY="87.0" text="Tipo do Quarto" />
+                        <TextField fx:id="tipoTxt" layoutX="189.0" layoutY="83.0" prefHeight="26.0" prefWidth="137.0" />
+                        <Label layoutX="65.0" layoutY="137.0" text="Numero do Quarto" />
+                        <TextField fx:id="nuTxt" layoutX="188.0" layoutY="133.0" prefHeight="26.0" prefWidth="140.0" />
+                        <Label layoutX="145.0" layoutY="186.0" text="Andar" />
+                        <TextField fx:id="andarTxt" layoutX="188.0" layoutY="182.0" prefHeight="26.0" prefWidth="141.0" />
+                        <Label layoutX="146.0" layoutY="239.0" text="Preco" />
+                        <TextField fx:id="precoTxt" layoutX="188.0" layoutY="235.0" prefHeight="26.0" prefWidth="141.0" />
+                        <Button layoutX="221.0" layoutY="338.0" mnemonicParsing="false" onAction="#cadastraQuarto" text="Criar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Editar Quarto">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
